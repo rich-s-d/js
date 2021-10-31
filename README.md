@@ -1,6 +1,8 @@
 # js
 Javascript cheatsheet etc.
 
+Before using any new ECMAScript feature etc. it is good practice to see if the browser is compatible yet: https://caniuse.com/
+
 js types:
 1. Number
 2. String
@@ -86,8 +88,40 @@ do {
 
 shift + enter in console.
 ```
+// the following methods belong to the window parent object.
 Prompt()
 alert()
 Number()
+// document (DOM, a js object) is a child of window.
+document //shows html document
+// DOM reads and takes instructions from html and css. The JS engine, V8 for example, reads JS and gives instructions to the DOM on how to manipulate html/css.
+```
+DOM selectors:
+```
+document.getElementsByTagName();
+document.querySelector(); //will retrieve the first element.
+document.querySelectorAll();
 
+//eg.
+document.querySelector("li").getAttribute("random"); //will return the value of the attribute "random"
+document.querySelector("li").style.background = "yellow"; //style accesses the css for this element.
+
+// But remember seperation of concerns.
+h1.className = "coolTitle"; //will apply the css class coolTitle to h1.
+document.querySelector("li").classList; // provides a list of classes in li
+document.querySelector("li").classList.remove("coolTitle"); //removes coolTitle that was applied.
+
+```
+// Listen to events!
+```
+var button = document.getElementById("enter");
+var input = document.getElementById("userinput");
+var ul = document.querySelector("ul");
+
+
+button.addEventListener("click", function() {
+	var li = document.createElement("li");
+	li.appendChild(document.createTextNode("Testing"));
+	ul.appendChild(li);
+});
 ```
