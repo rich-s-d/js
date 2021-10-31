@@ -49,12 +49,39 @@ array.sort();
 js loops:
 1. for
 2. while
-3. do
-4. ForEach
+3. do while loop
+4. ForEach (new in ECMAScript 5)
  ```
-for (var i=0; i < todos.length; i++) {
-    console.log(i);
-};
+var todos = [
+	"clean room",
+	"study js",
+	"be nice",
+];
+var todosLength = todos.length;
+for (var i=0; i < todosLength; i++) {
+	console.log(i);
+}
+
+todos.forEach(function(i) {
+	console.log(i);
+})
+//or
+function logToDos(todo, index) {
+	console.log(todo, index);
+}
+todos.forEach(logToDos);
+
+var counterone = 10;
+while (counterone > 0) {
+	console.log(counterone);
+	counterone--;
+}
+
+var counterTwo = 10;
+do {
+	console.log(counterTwo);
+	counterTwo--;
+} while (counterTwo > 0);
  ```
 
 shift + enter in console.
