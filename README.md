@@ -137,16 +137,16 @@ const add = (a + b) => a + b;
 ```
 ES7 (2016)
 Includes on strings and exponants
-`
+```
 const myString = "My String";
 console.log(myString.includes("My")); // returns true
 const twoToThePowerOfThree = 2**3; // returns 8
-`
+```
 ES8 (2017)
 Includes string padding, trailing commas allowed now, Object.entries and Object.values, async/await
-`
+```
 
-`
+```
 ES10 (2019)
 Includes flat(), flatMap() (flattening nested arrays), trimStart(), trimEnd() (for strings), fromEntries.
 ```
@@ -165,12 +165,12 @@ console.log(Object.fromEntries(usersArray));
 
 ```
 Advanced functions: clojures, currying and compose.
-`
-`
+```
+```
 Advanced arrays: map, filer and reduce.
-`
+```
 array = [1, 2, 3, 4, 5, 6]
 const multiplyArrayByTwo = array.map(x => x*2);
 const filterArrayLessThanThree = array.filter(x => x<3);
 const addEverythingInArrayOnTopOfAStartNumberOfTen = array.reduce((accumulator, x) => accumulator + x, 10);
-`
+```
