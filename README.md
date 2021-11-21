@@ -54,17 +54,22 @@ js loops:
 2. while
 3. do while loop
 4. ForEach (new in ECMAScript 5)
+5. for of (iterate arrays) (new in ES6)
+6. for in (enumerate object keys) (new in ES6)
  ```
 var todos = [
 	"clean room",
 	"study js",
 	"be nice",
 ];
+
+// for
 var todosLength = todos.length;
 for (var i=0; i < todosLength; i++) {
 	console.log(i);
 }
 
+//forEach
 todos.forEach(function(i) {
 	console.log(i);
 })
@@ -80,11 +85,26 @@ while (counterone > 0) {
 	counterone--;
 }
 
+// do while
 var counterTwo = 10;
 do {
 	console.log(counterTwo);
 	counterTwo--;
 } while (counterTwo > 0);
+
+// for of (iterate arrays)
+for (item of todos) {
+  console.log(item);
+}
+
+// for in (enumerate object keys)
+amazonBasket = {
+  glasses: 1,
+  books: 2,
+  floss: 100
+}
+for (item in basket) {
+  console.log(item); // returns glasses, books, floss
  ```
 
 shift + enter in console.
