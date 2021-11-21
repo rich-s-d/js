@@ -8,6 +8,7 @@ js types:
 2. String
 3. Boolean
 4. Undefined
+5. Symbol (as of ES6)
 6. Null
 7. Object
 
@@ -112,7 +113,7 @@ document.querySelector("li").classList; // provides a list of classes in li
 document.querySelector("li").classList.remove("coolTitle"); //removes coolTitle that was applied.
 
 ```
-// Listen to events!
+// Listen to events:
 ```
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
@@ -125,3 +126,51 @@ button.addEventListener("click", function() {
 	ul.appendChild(li);
 });
 ```
+ES6 (2015)
+```
+const
+let
+// Destructuring was introduced
+// Template strings introduced using back ticks ``
+// Arrow functions
+const add = (a + b) => a + b;
+```
+ES7 (2016)
+Includes on strings and exponants
+`
+const myString = "My String";
+console.log(myString.includes("My")); // returns true
+const twoToThePowerOfThree = 2**3; // returns 8
+`
+ES8 (2017)
+Includes string padding, trailing commas allowed now, Object.entries and Object.values, async/await
+`
+
+`
+ES10 (2019)
+Includes flat(), flatMap() (flattening nested arrays), trimStart(), trimEnd() (for strings), fromEntries.
+```
+const array = [1, 2, 3, [4, 5, [6, 7, [8, 9]], 10], 11]
+const flattenByDefaultOfOne = array.flat(); // returns [1, 2, 3, 4, 5, [6, 7, [8, 9]], 10, 11]
+const completelyFlatten = array.flat(Infinity); // returns [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+const myEmail = "          unitTesting@unittest.com"
+console.log(myEmail.trimStart()) // returns unitTesting@unittest.com
+
+//Turn object into array.. entries is not new, but fromEntries is.
+const users = { user1: 18273, user2: 92833, user3: 90315 }
+const usersArray = Object.entries(users);
+// Now back into Object..
+console.log(Object.fromEntries(usersArray));
+
+```
+Advanced functions: clojures, currying and compose.
+`
+`
+Advanced arrays: map, filer and reduce.
+`
+array = [1, 2, 3, 4, 5, 6]
+const multiplyArrayByTwo = array.map(x => x*2);
+const filterArrayLessThanThree = array.filter(x => x<3);
+const addEverythingInArrayOnTopOfAStartNumberOfTen = array.reduce((accumulator, x) => accumulator + x, 10);
+`
