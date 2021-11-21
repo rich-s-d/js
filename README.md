@@ -182,6 +182,25 @@ const users = { user1: 18273, user2: 92833, user3: 90315 }
 const usersArray = Object.entries(users);
 // Now back into Object..
 console.log(Object.fromEntries(usersArray));
+```
+ES2020 
+Includes BigInt, Optional Chainging Operator (?), Nullish Coalescing Operator (??)
+```
+typeof 1n // returns bigint (solves problem with MAX_SAFE_INTEGER, i.e., largest number that can save in binary memory)
+
+// chaining operator ?
+let weight = pokemon?.pikachu?.weight; // returns undefined if pokemon object or pikachu type do not exist rather than throwing an exception.
+
+// nullish coalescing operator ??
+let pokemon = {
+  pikachu: {
+    power: 0,
+    height: 23,
+  }
+}
+
+let power = pokemon?.pikachu?.power ?? "no power";
+console.log(power) // returns 0. If || was used instead of ?? then "no power" would return, not 0.
 
 ```
 Advanced functions: clojures, currying and compose.
